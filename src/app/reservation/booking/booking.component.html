@@ -4,7 +4,7 @@
 
   <app-stepper [currentStep]="2" [free]="reservationInfo.orderSummary.free"></app-stepper>
 
-  <app-countdown *ngIf="!expired" [validity]="reservationInfo.validity" (expired)="handleExpired($event)"></app-countdown>
+  <app-countdown *ngIf="!expired && false" [validity]="reservationInfo.validity" (expired)="handleExpired($event)"></app-countdown>
 
   <form [formGroup]="contactAndTicketsForm" (submit)="submitForm()">
 
