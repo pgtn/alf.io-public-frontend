@@ -1,6 +1,7 @@
 <!-- same day-->
 <span *ngIf="dateValidityProvider.sameDay">
   <span *ngIf="displayIcon"><fa-icon [icon]="['far', 'calendar-alt']" class="text-muted" [title]="'ticket.date-time' | translate"></fa-icon>&nbsp;</span>
+  <span>開催日&nbsp; </span>
   {{' ' + dateValidityProvider.formattedBeginDate[translate.currentLang]}}&nbsp;{{'event-days.single-day.hours'|translate: {'0': dateValidityProvider.formattedBeginTime[translate.currentLang], '1': dateValidityProvider.formattedEndTime[translate.currentLang]} }}
   <span class="text-muted" *ngIf="displayTimeZoneInfo">&nbsp; ({{dateValidityProvider.timeZone}})</span>
 </span>
