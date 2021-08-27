@@ -10,6 +10,9 @@
     <div class="col-1" *ngIf="displayIcon"><fa-icon [icon]="['far', 'calendar-alt']" class="text-muted" [title]="'ticket.date-time' | translate"></fa-icon></div>
     <div [ngClass]="{'col-11': displayIcon, 'col-12': !displayIcon}">
       <div>
+        <span>開催日&nbsp; </span>
+      </div>
+      <div>
         <span class="mr-2"><strong translate="event-days.from"></strong></span>
         <span>{{localizedStartDateForMultiDay}}</span>
         <span class="text-muted" *ngIf="displayTimeZoneInfo">&nbsp; ({{dateValidityProvider.timeZone}})</span>
